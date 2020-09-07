@@ -1,3 +1,4 @@
+/* eslint-disable no-process-exit */
 const { program } = require("commander");
 const loadFondue = require("fondue");
 const packageJson = require("./package.json");
