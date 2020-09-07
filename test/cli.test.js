@@ -1,5 +1,13 @@
-let path = require("path");
-let exec = require("child_process").exec;
+const path = require("path");
+const exec = require("child_process").exec;
+
+() => {
+	/**
+	 * Allow tests to be reran when index.js changes, without actually requiring it.
+	 * See https://github.com/facebook/jest/issues/5908
+	 */
+	require("../index");
+};
 
 describe("help", () => {
 	test("renders help on -h", async () => {
