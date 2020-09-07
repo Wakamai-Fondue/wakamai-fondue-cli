@@ -28,7 +28,8 @@
 		"prettier": "^2.1.1"
 	},
 	"dependencies": {
-		"commander": "^6.1.0"
+		"commander": "^6.1.0",
+		"fondue": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-engine.git#master"
 	},
 	"lint-staged": {
 		"*.{js,cjs,mjs,json,md}": [
