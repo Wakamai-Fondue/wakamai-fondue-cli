@@ -1,0 +1,22 @@
+{
+	"root": true,
+	"env": {
+		"browser": false,
+		"node": true,
+		"es6": true
+	},
+	"plugins": ["prettier"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:node/recommended",
+		"plugin:jest/recommended"
+	],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2018
+	},
+	"rules": {
+		"prettier/prettier": "error",
+		"no-useless-escape": 0
+	}
+}
