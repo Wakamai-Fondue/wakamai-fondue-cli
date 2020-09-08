@@ -9,6 +9,9 @@
 	"bin": {
 		"wakamai-fondue": "./cli.js"
 	},
+	"files": [
+		"cli.js"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-cli.git"
