@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"commander": "^6.1.0",
-		"fondue": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-engine.git#master"
+		"fondue": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-engine.git#705fc3f9d32c9cf8500fe89ff9c2b990eadc6e5d"
 	},
 	"lint-staged": {
 		"*.{js,cjs,mjs,json,md}": [
@@ -50,6 +50,6 @@
 		"testEnvironment": "node"
 	},
 	"engines": {
-		"node": ">=10"
+		"node": ">=12"
 	}
 }
