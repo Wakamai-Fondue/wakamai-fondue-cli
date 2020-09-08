@@ -46,6 +46,9 @@
 			"pre-commit": "lint-staged"
 		}
 	},
+	"jest": {
+		"testEnvironment": "node"
+	},
 	"engines": {
 		"node": ">=10"
 	}
