@@ -2,10 +2,12 @@
 	"name": "wakamai-fondue-cli",
 	"version": "1.0.0",
 	"description": "",
-	"main": "index.js",
 	"scripts": {
 		"test": "jest",
 		"lint": "eslint ."
+	},
+	"bin": {
+		"wakamai-fondue": "./cli.js"
 	},
 	"repository": {
 		"type": "git",

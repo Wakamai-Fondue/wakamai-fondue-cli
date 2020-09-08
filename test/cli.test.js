@@ -6,7 +6,7 @@ const exec = require("child_process").exec;
 	 * Allow tests to be reran when index.js changes, without actually requiring it.
 	 * See https://github.com/facebook/jest/issues/5908
 	 */
-	require("../index");
+	require("../cli");
 };
 
 describe("help", () => {
@@ -90,7 +90,7 @@ describe("--json", () => {
 function cli(args, cwd = ".") {
 	return new Promise((resolve) => {
 		exec(
-			`node ${path.resolve("./index")} ${args.join(" ")}`,
+			`node ${path.resolve("./cli")} ${args.join(" ")}`,
 			{ cwd },
 			(error, stdout, stderr) => {
 				resolve({
