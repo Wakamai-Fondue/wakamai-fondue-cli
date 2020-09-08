@@ -11,7 +11,7 @@ program
 	.action(run);
 
 program.option("-c, --css", "Generate CSS");
-program.option("-i, --info", "Dump info about font");
+program.option("-j, --json", "Dump info about font in JSON format");
 
 program.exitOverride((err) => {
 	if (
@@ -34,12 +34,12 @@ async function run(file) {
 		stdout.write(fondue.cssString);
 	}
 
-	if (program.info) {
+	if (program.json) {
 		const summary = fondue.summary;
 		stdout.write(JSON.stringify(summary, null, 4));
 	}
 
-	if (!program.css && !program.info) {
+	if (!program.css && !program.json) {
 		program.outputHelp();
 		process.exit(1);
 	}

@@ -36,7 +36,7 @@ describe("font file path", () => {
 	test("error when path does not exist", async () => {
 		const { exitCode, stdout, stderr } = await cli([
 			"./test/fixtures/bogus/nothing.ttf",
-			"--info",
+			"--json",
 		]);
 
 		expect(exitCode).toBe(1);
@@ -49,7 +49,7 @@ describe("font file path", () => {
 	test("error when path is not a font", async () => {
 		const { exitCode, stdout, stderr } = await cli([
 			"./test/fixtures/roboto/LICENSE",
-			"--info",
+			"--json",
 		]);
 
 		expect(exitCode).toBe(1);
@@ -73,11 +73,11 @@ describe("--css", () => {
 	});
 });
 
-describe("--info", () => {
+describe("--json", () => {
 	test("dumps all font info", async () => {
 		const { exitCode, stdout } = await cli([
 			"./test/fixtures/roboto/Roboto-Regular.ttf",
-			"--info",
+			"--json",
 		]);
 
 		expect(exitCode).toBe(0);
