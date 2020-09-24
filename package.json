@@ -13,6 +13,11 @@
 		"cli.js",
 		"README.md"
 	],
+	"keywords": [
+		"opentype",
+		"font",
+		"typography"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-cli.git"
