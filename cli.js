@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-process-exit */
 const { program } = require("commander");
-const loadFondue = require("fondue");
+const loadFondue = require("@wakamai-fondue/engine");
 const packageJson = require("./package.json");
 const { stdout } = require("process");
 
