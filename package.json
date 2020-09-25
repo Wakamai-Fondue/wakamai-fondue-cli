@@ -1,6 +1,6 @@
 {
-	"name": "wakamai-fondue-cli",
-	"version": "1.0.0",
+	"name": "@wakamai-fondue/cli",
+	"version": "1.0.0-beta.4",
 	"description": "",
 	"scripts": {
 		"test": "jest",
@@ -10,7 +10,20 @@
 		"wakamai-fondue": "./cli.js"
 	},
 	"files": [
-		"cli.js"
+		"cli.js",
+		"README.md"
+	],
+	"keywords": [
+		"font",
+		"truetype",
+		"opentype",
+		"typography",
+		"variable fonts",
+		"otf",
+		"ttf",
+		"woff",
+		"woff2",
+		"css"
 	],
 	"repository": {
 		"type": "git",
@@ -34,7 +47,7 @@
 	},
 	"dependencies": {
 		"commander": "^6.1.0",
-		"fondue": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-engine.git#705fc3f9d32c9cf8500fe89ff9c2b990eadc6e5d"
+		"@wakamai-fondue/engine": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-engine.git#eeb75565757d5243803adb129b46f38ac997e92d"
 	},
 	"lint-staged": {
 		"*.{js,cjs,mjs,json,md}": [
