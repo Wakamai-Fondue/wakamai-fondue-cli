@@ -14,9 +14,16 @@
 		"README.md"
 	],
 	"keywords": [
-		"opentype",
 		"font",
-		"typography"
+		"truetype",
+		"opentype",
+		"typography",
+		"variable fonts",
+		"otf",
+		"ttf",
+		"woff",
+		"woff2",
+		"css"
 	],
 	"repository": {
 		"type": "git",
