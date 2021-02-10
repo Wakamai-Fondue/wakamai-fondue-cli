@@ -62,6 +62,8 @@ describe("font file path", () => {
 
 describe("--css", () => {
 	test("renders font CSS for all features", async () => {
+		jest.setTimeout(10000); // generating css is quite slow at the moment :(
+
 		const { exitCode, stdout } = await cli([
 			"./test/fixtures/roboto/Roboto-Regular.ttf",
 			"--css",
