@@ -15,3 +15,7 @@ Options:
   -j, --json     Dump info about font in JSON format
   -h, --help     display help for command
 ```
+
+## Architecture
+
+See [ARCHITECTURE.md](./ARCHITECTURE.md) for brief developer docs.
