@@ -42,7 +42,7 @@ describe("font file path", () => {
 		expect(exitCode).toBe(1);
 		expect(stdout).toBe("");
 		expect(stderr).toBe(
-			"./test/fixtures/bogus/nothing.ttf: No such file\n"
+			"ENOENT: no such file or directory, open './test/fixtures/bogus/nothing.ttf'\n"
 		);
 	});
 
@@ -55,13 +55,15 @@ describe("font file path", () => {
 		expect(exitCode).toBe(1);
 		expect(stdout).toBe("");
 		expect(stderr).toBe(
-			"Error: FontNode error. File extension is missing.\n"
+			"./test/fixtures/roboto/LICENSE is either an unsupported font format, or not a font at all.\n"
 		);
 	});
 });
 
 describe("--css", () => {
 	test("renders font CSS for all features", async () => {
+		jest.setTimeout(10000); // generating css is quite slow at the moment :(
+
 		const { exitCode, stdout } = await cli([
 			"./test/fixtures/roboto/Roboto-Regular.ttf",
 			"--css",

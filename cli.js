@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-process-exit */
 const { program } = require("commander");
-const loadFondue = require("@wakamai-fondue/engine");
+const { fromPath } = require("@wakamai-fondue/engine");
 const packageJson = require("./package.json");
 const { stdout } = require("process");
 
@@ -48,7 +48,7 @@ async function run(file) {
 
 async function loadFont(file) {
 	try {
-		return await loadFondue(file);
+		return await fromPath(file);
 	} catch (e) {
 		let errorMessage;
 
