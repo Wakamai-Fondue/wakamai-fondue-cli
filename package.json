@@ -61,7 +61,8 @@
 		}
 	},
 	"jest": {
-		"testEnvironment": "node"
+		"testEnvironment": "node",
+		"testPathIgnorePatterns": ["./vendor/.*"]
 	},
 	"engines": {
 		"node": ">=12"
