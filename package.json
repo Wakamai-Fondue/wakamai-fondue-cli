@@ -4,13 +4,15 @@
 	"description": "",
 	"scripts": {
 		"test": "jest",
-		"lint": "eslint ."
+		"lint": "eslint .",
+		"prepare": "cd vendor/wf-engine && npm i"
 	},
 	"bin": {
 		"wakamai-fondue": "./cli.js"
 	},
 	"files": [
 		"cli.js",
+		"vendor/wf-engine/lib",
 		"README.md"
 	],
 	"keywords": [
@@ -46,7 +48,6 @@
 		"prettier": "^2.1.1"
 	},
 	"dependencies": {
-		"@wakamai-fondue/engine": "git+https://github.com/Wakamai-Fondue/wakamai-fondue-engine.git#320ecf394068fa91f915efd45e00ab4c3f7200a7",
 		"commander": "^6.1.0"
 	},
 	"lint-staged": {
@@ -60,7 +61,8 @@
 		}
 	},
 	"jest": {
-		"testEnvironment": "node"
+		"testEnvironment": "node",
+		"testPathIgnorePatterns": ["./vendor/.*"]
 	},
 	"engines": {
 		"node": ">=12"
